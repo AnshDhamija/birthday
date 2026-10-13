@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday, Tanishka!</title>
+
+  <!-- This script pulls in Tailwind CSS for styling -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- These are for the animations and photo gallery -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lightgallery.min.css" />
+
+  <!-- Google Fonts for the Anime look -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Link to your new external CSS file -->
+  <link rel="stylesheet" href="style.css">
+  <!-- IMPORTANT: Replace with a real image link after you upload it -->
+  <meta property="og:image" content="https://placehold.co/1200x630/87CEEB/FFFFFF?text=A+Surprise+For+Tanishka">
+</head>
+<body>
+<!-- Canvas for the falling cherry blossoms -->
+<canvas id="sakura-canvas"></canvas>
+
+<!-- Section 1: Hero Welcome -->
+<header class="h-screen relative flex items-center justify-center text-white overflow-hidden">
+  <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover z-[-1]">
+    <source src="img/video-01.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+
+  <div class="text-center z-10 p-4" data-aos="fade-in" data-aos-duration="1500">
+    <h1 class="text-5xl md:text-7xl font-anime drop-shadow-lg">Happy Birthday, Tanishka!</h1>
+    <p class="mt-4 text-xl font-semibold">A little collection of moments, laughter, and all the joy you bring.</p>
+    <div id="countdown" class="mt-6 text-2xl font-semibold tracking-widest leading-relaxed"></div>
+  </div>
+</header>
+
+<!-- Main Content -->
+<main class="container mx-auto p-6 md:p-12">
+
+  <!-- Section 2: A Letter For You -->
+  <section class="my-16 md:my-24 max-w-3xl mx-auto text-center" data-aos="fade-up">
+    <h2 class="text-4xl md:text-5xl font-anime text-sakura mb-8 drop-shadow-sm">A Special Message For You</h2>
+    <div class="text-left text-lg leading-relaxed space-y-4 bg-white p-8 rounded-lg shadow-lg">
+      <!-- TODO: Write your personal letter here -->
+      <p>Hey Tanishka,</p>
+      <p>Wish you a very Happy Birthday Tanishka! May god fulfil all your wishes, you have an endless supply of happy days and your dreams turns into reality, A life surrounded with pets and life that will become a manga </p>
+      <p>Thankyou for always being so kind and reason behind everyone smile, Always connected to your roots , A true friend to everyone, You always be yourself and that's your vibe We all are very lucky, we are not in city of gems still we found a real gem.</p>
+      <p class="text-right mt-8">
+        Regards<br>
+      </p>
+    </div>
+  </section>
+
+  <!-- Section 3: The Timeline -->
+  <section class="my-16 md:my-24">
+    <h2 class="text-4xl md:text-5xl font-anime text-center mb-12" data-aos="fade-up">Our Story Arc</h2>
+    <div class="space-y-16">
+      <!-- Timeline Item 1 -->
+      <div class="flex flex-col md:flex-row items-center gap-8" data-aos="fade-right">
+        <!-- TODO: Replace with your photo -->
+        <img src="img/story-01.jpeg" alt="Birthday memory 1 of Tanishka" class="w-full md:w-1/2 rounded-lg shadow-xl border-4 border-white"> <!--replce img1.png with name of your img-->
+        <div class="text-center md:text-left">
+          <!-- TODO: Customize the date and story -->
+          <h3 class="text-2xl font-anime text-sakura">A beautiful beginning</h3>
+          <p class="mt-2 text-lg">HAPPY BIRTHDAY MAHARANI SAHIBA 😭😭🫶💗 Bhai tu 19 ki hogyi brooo 😭😭 merei aur Geetali dono se late but koi na, finally madam bhi 19 ki hogyi 😭🙏🏻. I genuinely hope ki tu apni life enjoy kare, hamesha khush rahe, aur apni yehi fearless nature kabhi na badle. Bhai tu jaisi hai na, vaisi hi rehna hamesha because honestly, duniya ko aur tere aas paas ke logon ko tere jaisi personality ki zarurat hai. Never let anyone make you feel like you need to change yourself just to fit in. 🫶🏻💗</p>
+            <br>
+        </div>
+      </div>
+      <!-- Timeline Item 2 -->
+      <div class="flex flex-col md:flex-row-reverse items-center gap-8" data-aos="fade-left">
+        <!-- TODO: Replace with your photo -->
+        <img src="img/story-02.jpeg" alt="Birthday memory 2 of Tanishka" class="w-full md:w-1/2 rounded-lg shadow-xl border-4 border-white">
+        <div class="text-center md:text-right">
+          <!-- TODO: Customize the date and story -->
+          <h3 class="text-2xl font-anime text-sakura">Little moments, big smiles</h3>
+          <p class="mt-2 text-lg">Bhai jab bhi mujhe koi advice ya koi raaye chahiye hoti hai na, tu hamesha de deti hai, and thank you so much for that. Sometimes I don't even realise how much I appreciate these little things, but genuinely, it means a lot to me ki I have someone like you jiske paas mai kuch bhi leke jaa sakti hoon and I know ki tu apni honest opinion degi. Chahe mujhe vo sunni ho ya nahi 😭😭🙏🏻. Thank you for being that person jisse mai bina soche apni baatein share kar sakti hoon</p>
+         <br>
+        </div>
+      </div>
+      <!-- Timeline Item 3 (NEW) -->
+      <div class="flex flex-col md:flex-row items-center gap-8" data-aos="fade-right">
+        <img src="img/story-03.jpeg" alt="Birthday memory 3 of Tanishka" class="w-full md:w-1/2 rounded-lg shadow-xl border-4 border-white">
+        <div class="text-center md:text-left">
+          <h3 class="text-2xl font-anime text-sakura">Your brightest chapters</h3>
+          <p class="mt-2 text-lg">And bhai, I love how we can talk about literally anything and everything. Kabhi serious baatein, kabhi faltu ki bakchodi, kabhi kisi ki chugli, aur kabhi ekdum random topics jinka koi matlab hi nahi hota 😭😭. But somehow, these little moments end up becoming some of my favourite memories.</p>
+         <br>
+        </div>
+      </div>
+      <!-- Timeline Item 4 (NEW) -->
+      <div class="flex flex-col md:flex-row-reverse items-center gap-8" data-aos="fade-left">
+        <img src="img/story-04.jpeg" alt="Birthday memory 4 of Tanishka" class="w-full md:w-1/2 rounded-lg shadow-xl border-4 border-white">
+        <div class="text-center md:text-right">
+          <h3 class="text-2xl font-anime text-sakura">More memories to come</h3>
+          <p class="mt-2 text-lg">HAPPY BIRTHDAY TODH DEI SAREI DUSHMANO KI GALI</p>
+            <br>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Your Favourite Photos of your loved Ones (NEW SECTION) -->
+  <section class="my-16 md:my-24">
+    <h2 class="text-4xl md:text-5xl font-anime text-center mb-12" data-aos="fade-up">Hall of Fame</h2>
+    <div class="relative">
+      <!-- Scroll Buttons -->
+      <button id="scroll-left-btn" class="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-white rounded-full p-2 shadow-md transition-opacity opacity-0 md:opacity-100">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-sakura" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+      </button>
+      <button id="scroll-right-btn" class="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-white rounded-full p-2 shadow-md transition-opacity opacity-0 md:opacity-100">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-sakura" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+      </button>
+
+      <!-- Scrollable Container -->
+      <div id="hall-of-fame-scroller" class="flex overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide p-4 -mx-4">
+        <div class="flex snap-x snap-mandatory gap-8">
+          <!--  Card 1 -->
+          <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="100">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
+              <img src="img/memory-05.jpeg" alt="Photo 1" class="w-full h-80 object-cover rounded-md mb-4"> 
+              <h3 class="text-2xl font-anime text-sakura">A favorite moment</h3>
+              <p class="mt-2">"Caption 1”"</p>
+            </div>
+          </div>
+          <!--  Card 2 -->
+          <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="200">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
+              <img src="img/memory-06.jpeg" alt="Photo 2" class="w-full h-80 object-cover rounded-md mb-4">
+              <h3 class="text-2xl font-anime text-sakura">A favorite moment</h3>
+              <p class="mt-2">A little moment to remember</p>
+            </div>
+          </div>
+          <!--  Card 3 -->
+          <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="300">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
+              <img src="img/memory-07.jpeg" alt="Photo 3" class="w-full h-80 object-cover rounded-md mb-4">
+              <h3 class="text-2xl font-anime text-sakura">A favorite moment</h3>
+              <p class="mt-2">A little moment to remember</p>
+            </div>
+          </div>
+          <!--  Card 4 -->
+          <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="400">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
+              <img src="img/memory-08.jpeg" alt="Photo 4" class="w-full h-80 object-cover rounded-md mb-4">
+              <h3 class="text-2xl font-anime text-sakura">A favorite moment</h3>
+              <p class="mt-2">A little moment to remember</p>
+            </div>
+          </div>
+          <!--  Card 5 -->
+          <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="500">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
+              <img src="img/memory-09.jpeg" alt="Photo 5" class="w-full h-80 object-cover rounded-md mb-4">
+              <h3 class="text-2xl font-anime text-sakura">A favorite moment</h3>
+              <p class="mt-2">A little moment to remember</p>
+            </div>
+          </div>
+          <!-- Card 6 -->
+          <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="600">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
+              <img src="img/memory-10.jpeg" alt="Photo 6" class="w-full h-80 object-cover rounded-md mb-4">
+              <h3 class="text-2xl font-anime text-sakura">A favorite moment</h3>
+              <p class="mt-2">A little moment to remember</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: The Gallery -->
+  <section class="my-16 md:my-24">
+    <h2 class="text-4xl md:text-5xl font-anime text-center mb-12" data-aos="fade-up">The Y.V.A. Collection</h2>
+    <p class="text-center text-lg -mt-8 mb-12">Your Very-own Adventures</p>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <a href="img/memory-01.jpeg" data-aos="zoom-in" class="block w-full h-48 md:h-64">
+        <img src="img/memory-01.jpeg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Birthday memory 1" loading="lazy">
+      </a>      <a href="img/memory-02.jpeg" data-aos="zoom-in" class="block w-full h-48 md:h-64">
+        <img src="img/memory-02.jpeg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Birthday memory 2" loading="lazy">
+      </a>      <a href="img/memory-03.jpeg" data-aos="zoom-in" class="block w-full h-48 md:h-64">
+        <img src="img/memory-03.jpeg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Birthday memory 3" loading="lazy">
+      </a>      <a href="img/memory-04.jpeg" data-aos="zoom-in" class="block w-full h-48 md:h-64">
+        <img src="img/memory-04.jpeg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Birthday memory 4" loading="lazy">
+      </a>      <a href="img/memory-05.jpeg" data-aos="zoom-in" class="block w-full h-48 md:h-64">
+        <img src="img/memory-05.jpeg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Birthday memory 5" loading="lazy">
+      </a>      <a href="img/memory-06.jpeg" data-aos="zoom-in" class="block w-full h-48 md:h-64">
+        <img src="img/memory-06.jpeg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Birthday memory 6" loading="lazy">
+      </a>      <a href="img/memory-07.jpeg" data-aos="zoom-in" class="block w-full h-48 md:h-64">
+        <img src="img/memory-07.jpeg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Birthday memory 7" loading="lazy">
+      </a>      <a href="img/memory-08.jpeg" data-aos="zoom-in" class="block w-full h-48 md:h-64">
+        <img src="img/memory-08.jpeg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Birthday memory 8" loading="lazy">
+      </a>      <a href="img/memory-09.jpeg" data-aos="zoom-in" class="block w-full h-48 md:h-64">
+        <img src="img/memory-09.jpeg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Birthday memory 9" loading="lazy">
+      </a>      <a href="img/memory-10.jpeg" data-aos="zoom-in" class="block w-full h-48 md:h-64">
+        <img src="img/memory-10.jpeg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Birthday memory 10" loading="lazy">
+      </a>      <a href="img/memory-11.jpeg" data-aos="zoom-in" class="block w-full h-48 md:h-64">
+        <img src="img/memory-11.jpeg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Birthday memory 11" loading="lazy">
+      </a>      <a href="img/memory-12.jpeg" data-aos="zoom-in" class="block w-full h-48 md:h-64">
+        <img src="img/memory-12.jpeg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Birthday memory 12" loading="lazy">
+      </a>      <a href="img/memory-13.jpeg" data-aos="zoom-in" class="block w-full h-48 md:h-64">
+        <img src="img/memory-13.jpeg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Birthday memory 13" loading="lazy">
+      </a>      <a href="img/memory-14.jpeg" data-aos="zoom-in" class="block w-full h-48 md:h-64">
+        <img src="img/memory-14.jpeg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Birthday memory 14" loading="lazy">
+      </a>      <a href="img/memory-15.jpeg" data-aos="zoom-in" class="block w-full h-48 md:h-64">
+        <img src="img/memory-15.jpeg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Birthday memory 15" loading="lazy">
+      </a>      <a href="img/memory-16.jpeg" data-aos="zoom-in" class="block w-full h-48 md:h-64">
+        <img src="img/memory-16.jpeg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Birthday memory 16" loading="lazy">
+      </a>      <a href="img/memory-17.jpeg" data-aos="zoom-in" class="block w-full h-48 md:h-64">
+        <img src="img/memory-17.jpeg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Birthday memory 17" loading="lazy">
+      </a>      <a href="img/memory-18.jpeg" data-aos="zoom-in" class="block w-full h-48 md:h-64">
+        <img src="img/memory-18.jpeg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Birthday memory 18" loading="lazy">
+      </a>      <a href="img/memory-19.jpeg" data-aos="zoom-in" class="block w-full h-48 md:h-64">
+        <img src="img/memory-19.jpeg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Birthday memory 19" loading="lazy">
+      </a>      <a href="img/memory-20.jpeg" data-aos="zoom-in" class="block w-full h-48 md:h-64">
+        <img src="img/memory-20.jpeg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Birthday memory 20" loading="lazy">
+      </a>      <a href="img/memory-21.jpeg" data-aos="zoom-in" class="block w-full h-48 md:h-64">
+        <img src="img/memory-21.jpeg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Birthday memory 21" loading="lazy">
+      </a>      <a href="img/memory-22.jpeg" data-aos="zoom-in" class="block w-full h-48 md:h-64">
+        <img src="img/memory-22.jpeg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Birthday memory 22" loading="lazy">
+      </a>
+
+      <a href="img/memory-14.jpeg" data-aos="zoom-in" class="block w-full h-48 md:h-64">
+        <img src="img/memory-14.jpeg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Birthday memory from Tanishka's photo collection, repeated favorite 14" loading="lazy">
+      </a>
+      <a href="img/memory-06.jpeg" data-aos="zoom-in" class="block w-full h-48 md:h-64">
+        <img src="img/memory-06.jpeg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Birthday memory from Tanishka's photo collection, repeated favorite 6" loading="lazy">
+      </a>    </div>
+  </section>
+
+  <!-- Section 5b: Video memories -->
+  <section class="my-16 md:my-24">
+    <h2 class="text-4xl md:text-5xl font-anime text-center mb-12" data-aos="fade-up">Video Memories</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <figure class="rounded-lg overflow-hidden bg-white shadow-lg" data-aos="zoom-in">
+        <video class="w-full aspect-[9/16] max-h-[32rem] object-cover bg-black" autoplay loop muted playsinline preload="auto" aria-label="Birthday video 1">
+          <source src="img/video-01.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <figcaption class="p-3 text-center font-semibold">Memory 1</figcaption>
+      </figure>      <figure class="rounded-lg overflow-hidden bg-white shadow-lg" data-aos="zoom-in">
+        <video class="w-full aspect-[9/16] max-h-[32rem] object-cover bg-black" autoplay loop muted playsinline preload="auto" aria-label="Birthday video 2">
+          <source src="img/video-02.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <figcaption class="p-3 text-center font-semibold">Memory 2</figcaption>
+      </figure>      <figure class="rounded-lg overflow-hidden bg-white shadow-lg" data-aos="zoom-in">
+        <video class="w-full aspect-[9/16] max-h-[32rem] object-cover bg-black" autoplay loop muted playsinline preload="auto" aria-label="Birthday video 3">
+          <source src="img/video-03.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <figcaption class="p-3 text-center font-semibold">Memory 3</figcaption>
+      </figure>      <figure class="rounded-lg overflow-hidden bg-white shadow-lg" data-aos="zoom-in">
+        <video class="w-full aspect-[9/16] max-h-[32rem] object-cover bg-black" autoplay loop muted playsinline preload="auto" aria-label="Birthday video 4">
+          <source src="img/video-04.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <figcaption class="p-3 text-center font-semibold">Memory 4</figcaption>
+      </figure>      <figure class="rounded-lg overflow-hidden bg-white shadow-lg" data-aos="zoom-in">
+        <video class="w-full aspect-[9/16] max-h-[32rem] object-cover bg-black" autoplay loop muted playsinline preload="auto" aria-label="Birthday video 5">
+          <source src="img/video-05.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <figcaption class="p-3 text-center font-semibold">Memory 5</figcaption>
+      </figure>      <figure class="rounded-lg overflow-hidden bg-white shadow-lg" data-aos="zoom-in">
+        <video class="w-full aspect-[9/16] max-h-[32rem] object-cover bg-black" autoplay loop muted playsinline preload="auto" aria-label="Birthday video 6">
+          <source src="img/video-06.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <figcaption class="p-3 text-center font-semibold">Memory 6</figcaption>
+      </figure>      <figure class="rounded-lg overflow-hidden bg-white shadow-lg" data-aos="zoom-in">
+        <video class="w-full aspect-[9/16] max-h-[32rem] object-cover bg-black" autoplay loop muted playsinline preload="auto" aria-label="Birthday video 7">
+          <source src="img/video-07.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <figcaption class="p-3 text-center font-semibold">Memory 7</figcaption>
+      </figure>      <figure class="rounded-lg overflow-hidden bg-white shadow-lg" data-aos="zoom-in">
+        <video class="w-full aspect-[9/16] max-h-[32rem] object-cover bg-black" autoplay loop muted playsinline preload="auto" aria-label="Birthday video 8">
+          <source src="img/video-08.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <figcaption class="p-3 text-center font-semibold">Memory 8</figcaption>
+      </figure>      <figure class="rounded-lg overflow-hidden bg-white shadow-lg" data-aos="zoom-in">
+        <video class="w-full aspect-[9/16] max-h-[32rem] object-cover bg-black" autoplay loop muted playsinline preload="auto" aria-label="Birthday video 9">
+          <source src="img/video-09.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <figcaption class="p-3 text-center font-semibold">Memory 9</figcaption>
+      </figure>      <figure class="rounded-lg overflow-hidden bg-white shadow-lg" data-aos="zoom-in">
+        <video class="w-full aspect-[9/16] max-h-[32rem] object-cover bg-black" autoplay loop muted playsinline preload="auto" aria-label="Birthday video 10">
+          <source src="img/video-10.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <figcaption class="p-3 text-center font-semibold">Memory 10</figcaption>
+      </figure>      <figure class="rounded-lg overflow-hidden bg-white shadow-lg" data-aos="zoom-in">
+        <video class="w-full aspect-[9/16] max-h-[32rem] object-cover bg-black" autoplay loop muted playsinline preload="auto" aria-label="Birthday video 11">
+          <source src="img/video-11.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <figcaption class="p-3 text-center font-semibold">Memory 11</figcaption>
+      </figure>      <figure class="rounded-lg overflow-hidden bg-white shadow-lg" data-aos="zoom-in">
+        <video class="w-full aspect-[9/16] max-h-[32rem] object-cover bg-black" autoplay loop muted playsinline preload="auto" aria-label="Birthday video 12">
+          <source src="img/video-12.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <figcaption class="p-3 text-center font-semibold">Memory 12</figcaption>
+      </figure>      <figure class="rounded-lg overflow-hidden bg-white shadow-lg" data-aos="zoom-in">
+        <video class="w-full aspect-[9/16] max-h-[32rem] object-cover bg-black" autoplay loop muted playsinline preload="auto" aria-label="Birthday video 13">
+          <source src="img/video-13.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <figcaption class="p-3 text-center font-semibold">Memory 13</figcaption>
+      </figure>      <figure class="rounded-lg overflow-hidden bg-white shadow-lg" data-aos="zoom-in">
+        <video class="w-full aspect-[9/16] max-h-[32rem] object-cover bg-black" autoplay loop muted playsinline preload="auto" aria-label="Birthday video 14">
+          <source src="img/video-14.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <figcaption class="p-3 text-center font-semibold">Memory 14</figcaption>
+      </figure>      <figure class="rounded-lg overflow-hidden bg-white shadow-lg" data-aos="zoom-in">
+        <video class="w-full aspect-[9/16] max-h-[32rem] object-cover bg-black" autoplay loop muted playsinline preload="auto" aria-label="Birthday video 15">
+          <source src="img/video-15.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <figcaption class="p-3 text-center font-semibold">Memory 15</figcaption>
+      </figure>      <figure class="rounded-lg overflow-hidden bg-white shadow-lg" data-aos="zoom-in">
+        <video class="w-full aspect-[9/16] max-h-[32rem] object-cover bg-black" autoplay loop muted playsinline preload="auto" aria-label="Birthday video 16">
+          <source src="img/video-16.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <figcaption class="p-3 text-center font-semibold">Memory 16</figcaption>
+      </figure>      <figure class="rounded-lg overflow-hidden bg-white shadow-lg" data-aos="zoom-in">
+        <video class="w-full aspect-[9/16] max-h-[32rem] object-cover bg-black" autoplay loop muted playsinline preload="auto" aria-label="Birthday video 17">
+          <source src="img/video-17.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <figcaption class="p-3 text-center font-semibold">Memory 17</figcaption>
+      </figure>      <figure class="rounded-lg overflow-hidden bg-white shadow-lg" data-aos="zoom-in">
+        <video class="w-full aspect-[9/16] max-h-[32rem] object-cover bg-black" autoplay loop muted playsinline preload="auto" aria-label="Birthday video 18">
+          <source src="img/video-18.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <figcaption class="p-3 text-center font-semibold">Memory 18</figcaption>
+      </figure>      <figure class="rounded-lg overflow-hidden bg-white shadow-lg" data-aos="zoom-in">
+        <video class="w-full aspect-[9/16] max-h-[32rem] object-cover bg-black" autoplay loop muted playsinline preload="auto" aria-label="Birthday video 19">
+          <source src="img/video-19.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <figcaption class="p-3 text-center font-semibold">Memory 19</figcaption>
+      </figure>      <figure class="rounded-lg overflow-hidden bg-white shadow-lg" data-aos="zoom-in">
+        <video class="w-full aspect-[9/16] max-h-[32rem] object-cover bg-black" autoplay loop muted playsinline preload="auto" aria-label="Birthday video 20">
+          <source src="img/video-20.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <figcaption class="p-3 text-center font-semibold">Memory 20</figcaption>
+      </figure>
+    </div>
+  </section>
+    <!-- Section 6: Finale -->
+    <section class="my-16 md:my-24" data-aos="fade-up">
+        <h2 class="text-4xl md:text-5xl font-anime text-center mb-4">Happy Birthday Tanishka</h2>
+        <div class="max-w-4xl mx-auto rounded-lg shadow-2xl overflow-hidden bg-navy">
+    </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-navy text-white p-8 text-center">
+  <p>Enjoy your day to the fullest.</p>
+  <p class="text-sm opacity-70 mt-2">Hope you liked it...</p>
+</footer>
+
+<!-- These scripts are for the animations and photo gallery -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/lightgallery.min.js"></script>
+
+<!-- Link to your new external JavaScript file -->
+<script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
